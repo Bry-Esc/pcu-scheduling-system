@@ -27,8 +27,7 @@ class CreateInstructorsInfosTable extends Migration
             $table->string('degree_status')->nullable();
             $table->string('program_graduated')->nullable();
             $table->string('employee_type')->nullable();
-            $table->foreign("instructor_id")->references("id")
-                    ->on("users")->onUpdate("cascade");
+            $table->foreign("instructor_id")->references("id")->on("users")->onUpdate("cascade");
             $table->timestamps();
         });
     }

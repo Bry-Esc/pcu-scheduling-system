@@ -19,7 +19,7 @@
              </div>
         @endif
 
-        <!-- search form (Optional) -->
+        {{-- Search Form (Optional) --}}
         <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
                 <input type="text" name="q" class="form-control" placeholder="{{ trans('adminlte_lang::message.search') }}..."/>
@@ -36,6 +36,8 @@
             <!-- Optionally, you can add icons to the links -->
         <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MENU</li>
+
+        {{-- Home --}}
         <li class="active">
             <a href="{{ url('home') }}">
                 <i class='fa fa-home'></i>
@@ -43,13 +45,7 @@
             </a>
         </li>
 
-        <li class="">
-            <a href="{{ url('/superadmin/register_admin') }}">
-                <i class='fa fa-user '></i>
-                <span>Register Administrator</span>
-            </a>
-        </li>
-
+        {{-- Faculty Loading --}}
         <li>
             <a href="/admin/faculty_loading">
                 <i class='fa  fa-list'></i>
@@ -57,6 +53,7 @@
             </a>
         </li>
         
+        {{-- Maintenance --}}
         <li class="treeview">
             <a href="#">
                 <i class="fa fa-gears"></i>
@@ -72,15 +69,11 @@
                         <span>Room Maintenance</span>
                     </a>
                 </li>
-                <li>
-                    <a href="/admin/section_management">
-                        <i class='fa fa-gear'></i>
-                        <span>Section Management</span>
-                    </a>
-                </li>
+                
             </ul>
         </li>
 
+        {{-- Section Maintenance --}}
         <li class="treeview">
             <a href="#">
                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
@@ -90,39 +83,65 @@
                 </span>
             </a>
             <ul class="treeview-menu">
-                <li><a href="/admin/curiculum_management/curriculum"><i class='fa fa-edit'></i> <span>Curriculum</span></a></li>
-                <li><a href="/admin/course_offerings"><i class='fa fa-edit'></i> <span>Course Offering</span></a></li>
-                <li><a href="/admin/course_scheduling"><i class='fa fa-edit'></i> <span>Course Scheduling</span></a></li>
-                <li><a href="/admin/instructor/add_instructor"><i class="fa fa-user-plus"></i> <span>Add User</span></a></li>
-                <li><a href="/admin/instructor/view_instructor_account"><i class="fa fa-users" aria-hidden="true"></i> <span>View Users</span></a></li>
+                <li>
+                    <a href="/admin/section_management">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Section Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/curiculum_management/curriculum">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Curriculum</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/course_offerings">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Course Offering</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/course_scheduling">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Course Scheduling</span>
+                    </a>
+                </li>
             </ul>
         </li>
 
-        {{-- <li class="treeview">
-            <a href="#"><i class="fa fa-folder"></i> <span>Curriculum Management</span>
+        {{-- User Profile --}}
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span>User Profile</span>
                 <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>
             </a>
             <ul class="treeview-menu">
-                <li><a href="/admin/curiculum_management/curriculum"><i class='fa fa-edit'></i> <span>Curriculum</span></a></li>
-                <li><a href="/admin/course_offerings"><i class='fa fa-edit'></i> <span>Course Offering</span></a></li>
-                <li><a href="/admin/course_scheduling"><i class='fa fa-edit'></i> <span>Course Scheduling</span></a></li>
+                <li class="">
+                    <a href="{{ url('/superadmin/register_admin') }}">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <span>Register Administrator</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/instructor/add_instructor">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <span>Add User</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/instructor/view_instructor_account">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span>View Users</span>
+                    </a>
+                </li>
             </ul>
-        </li> --}}
-            
-        {{-- <li class="treeview">
-            <a href="#"><i class="fa fa-male"></i> <span>Instructor</span>
-                <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                </span>
-            </a>
-            <ul class="treeview-menu">
-                <li><a href="/admin/instructor/add_instructor"><i class="fa fa-user-plus"></i> <span>Add Instructor</span></a></li>
-                <li><a href="/admin/instructor/view_instructor_account"><i class="fa fa-circle-o"></i> <span>View Instructors</span></a></li>
-            </ul>
-        </li> --}}
+        </li>
               
+        {{-- Reports & Analytics --}}
         <li class="treeview">
             <a href="#">
                 <i class="fa fa-pencil"></i>
