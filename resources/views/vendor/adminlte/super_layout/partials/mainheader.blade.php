@@ -2,10 +2,12 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{ url('/home') }}" class="logo">
-        <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>PCU Scheduling System</b></span>
-    </a>
+    <div class="pcu-logo-container">
+        <a href="{{ url('/home') }}">
+            <!-- logo for regular state and mobile devices -->
+            <img class="pcu-logo" src="{{asset('img/schd-detailed-logo.png')}}" alt="pcu-logo"/>
+        </a>
+    </div>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
@@ -22,6 +24,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class=""></i>
                         <span class="label label-success"></span>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="header">{{ trans('adminlte_lang::message.tabmessages') }}</li>
@@ -52,9 +55,10 @@
                 <!-- Notifications Menu -->
                 <li class="">
                     <!-- Menu toggle button -->
-                    <a href="#" class="" data-toggle="">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class=""></i>
                         <span class=""></span>
+                        <i class="fa fa-bell" aria-hidden="true"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="header">{{ trans('adminlte_lang::message.notifications') }}</li>
@@ -68,7 +72,7 @@
                                 </li><!-- end notification -->
                             </ul>
                         </li>   
-                        <li class="footer"><a href="#">{{ trans('adminlte_lang::message.viewall') }}</a></li>
+                        <li class="footer"><a href="{{ url('/admin/notification') }}">{{ trans('adminlte_lang::message.viewall') }}</a></li>
                     </ul>
                 </li>
                 <!-- Tasks Menu -->
@@ -77,6 +81,7 @@
                     <a href="#" class="" data-toggle="dropdown">
                         <i class=""></i>
                         <span class="label label-danger"></span>
+                        <i class="fa fa-tasks" aria-hidden="true"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="header">{{ trans('adminlte_lang::message.tasks') }}</li>
@@ -115,21 +120,23 @@
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src="http://scheduling.local/images/avatar5.png" class="user-image" alt="User Image"/>
+                            <img src="{{ asset('img/avatar04.png') }}" class="user-image" alt="User Imge"  />
+                            {{-- <img src="{{ Gravatar::get($user->email) }}" class="user-image" alt="User Imge"  /> --}}
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class="hidden-xs">{{ Auth::user()->name }}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src="http://scheduling.local/images/avatar5.png" class="img-circle" alt="User Image" />
+                                <img src="{{ asset('img/avatar04.png') }}" class="img-circle" alt="User Imge"  />
+                                {{-- <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Imge"  /> --}}
                                 <p>
                                     {{ Auth::user()->name }}
                                     <small>{{ trans('adminlte_lang::message.login') }} </small>
                                 </p>
                             </li>
                             <!-- Menu Body -->
- <!--                           <li class="user-body">
+                            {{-- <li class="user-body">
                                 <div class="col-xs-4 text-center">
                                     <a href="#">{{ trans('adminlte_lang::message.followers') }}</a>
                                 </div>
@@ -139,11 +146,11 @@
                                 <div class="col-xs-4 text-center">
                                     <a href="#">{{ trans('adminlte_lang::message.friends') }}</a>
                                 </div>
-                            </li>
+                            </li> --}}
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-<!--                                    <a href="{{ url('/settings') }}" class="btn btn-default btn-flat">{{ trans('adminlte_lang::message.profile') }}</a>-->
+                                    <a href="{{ url('/account/change_password') }}" class="btn btn-default btn-flat">{{ trans('adminlte_lang::message.profile') }}</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
@@ -164,8 +171,7 @@
                 @endif
 
                 <!-- Control Sidebar Toggle Button -->
-                <li>
-<!--                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>-->
+                {{-- <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a> --}}
                 </li>
             </ul>
         </div>

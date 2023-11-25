@@ -66,7 +66,7 @@ class UploadCurriculumController extends Controller
     }
     
     function save_changes(Request $request){
-        if(Auth::user()->accesslevel == env('REG_COLLEGE')){
+        if(Auth::user()->accesslevel == env('REG_COLLEGE') || Auth::user()->accesslevel == 100){
             for($x=0;$x<=count($request->curriculum_year);$x++){
                 if(array_key_exists($x, $request->curriculum_year)){
                     $curricula = new \App\curriculum;
@@ -92,7 +92,8 @@ class UploadCurriculumController extends Controller
             
             return redirect(url('/admin/curiculum_management/curriculum'));
         }else{
-            return view('layouts.401');
+            // return view('layouts.401');
+            return redirect('/');
         }
     }
     

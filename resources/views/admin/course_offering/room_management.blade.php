@@ -20,7 +20,7 @@ if(Auth::user()->is_first_login == 1){
 @section('main-content')
 <section class="content-header">
       <h1><i class="fa fa-bullhorn"></i>
-        Room Management
+        Room Maintenance
         <small></small>
       </h1>
       <ol class="breadcrumb">

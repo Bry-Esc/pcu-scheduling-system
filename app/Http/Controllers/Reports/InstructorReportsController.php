@@ -18,21 +18,23 @@ class InstructorReportsController extends Controller
         if (Auth::user()->accesslevel == env('REG_COLLEGE') || Auth::user()->accesslevel == env("DEAN")) {
             return view('/admin/instructor/add_instructor');
         }else{
-            return view('layouts.401');
+            // return view('layouts.401');
+            return redirect('/');
         }
     }
 
     function view_add() {
-        if (Auth::user()->accesslevel == 0) {
+        if (Auth::user()->accesslevel == 0 || Auth::user()->accesslevel == 100) {
             $instructors = \App\User::where('accesslevel',1)->get();
             return view('/admin/instructor/instructor_reports',compact('instructors'));
         }else{
-            return view('layouts.401');
+            // return view('layouts.401');
+            return redirect('/');
         }
     }
     
     function view_info($id){
-        if (Auth::user()->accesslevel == 0) {
+        if (Auth::user()->accesslevel == 0 || Auth::user()->accesslevel == 100) {
             $user = \App\User::find($id);
             $info = \App\instructors_infos::where('instructor_id',$id)->first();
             return view('/admin/instructor/view_info',compact('user','info'));
@@ -40,13 +42,12 @@ class InstructorReportsController extends Controller
     }
 
     function add(Request $request) {
-        if (Auth::user()->accesslevel == 0) {
-           
-         
+        if (Auth::user()->accesslevel == 0 || Auth::user()->accesslevel == 100) {
            $this->create_new_instructor($request);
             
         }else{
-            return view('layouts.401');
+            // return view('layouts.401');
+            return redirect('/');
         }
     }
 
