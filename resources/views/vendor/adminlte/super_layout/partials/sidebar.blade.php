@@ -66,8 +66,18 @@
                 </span>
             </a>
             <ul class="treeview-menu">
-                <li><a href="/admin/room_management"><i class='fa  fa-gear'></i> <span>Room Maintenance</span></a></li>
-                <li><a href="/admin/section_management"><i class='fa fa-gear'></i> <span>Section Management</span></a></li>
+                <li>
+                    <a href="/admin/room_management">
+                        <i class='fa  fa-gear'></i>
+                        <span>Room Maintenance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/section_management">
+                        <i class='fa fa-gear'></i>
+                        <span>Section Management</span>
+                    </a>
+                </li>
             </ul>
         </li>
 
@@ -84,7 +94,7 @@
                 <li><a href="/admin/course_offerings"><i class='fa fa-edit'></i> <span>Course Offering</span></a></li>
                 <li><a href="/admin/course_scheduling"><i class='fa fa-edit'></i> <span>Course Scheduling</span></a></li>
                 <li><a href="/admin/instructor/add_instructor"><i class="fa fa-user-plus"></i> <span>Add User</span></a></li>
-                <li><a href="/admin/instructor/view_instructor_account"><i class="fa fa-circle-o"></i> <span>View Users</span></a></li>
+                <li><a href="/admin/instructor/view_instructor_account"><i class="fa fa-users" aria-hidden="true"></i> <span>View Users</span></a></li>
             </ul>
         </li>
 
