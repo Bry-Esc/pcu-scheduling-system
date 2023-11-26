@@ -37,30 +37,32 @@ class HomeController extends Controller {
 
     public function index() {
         $role = Auth::user()->accesslevel;
-
-        if($role == 0){
-            if(Auth::user()->is_first_login == 1){
+    
+        // Check user role and determine the view to render based on the role and login status
+        if ($role == 0) {
+            // Admin (level 0)
+            if (Auth::user()->is_first_login == 1) {
                 return view('instructor.first_login');
-            }else{
-                return view('admin.dashboard');
-            }
-
-        } elseif($role == 1){
-            if(Auth::user()->is_first_login == 1){
+            } 
+            return view('admin.dashboard');
+            
+        } elseif ($role == 1) {
+            // Instructor (level 1)
+            if (Auth::user()->is_first_login == 1) {
                 return view('instructor.first_login');
-            }else{
-                return view('instructor.dashboard');
             }
-
-        } elseif($role == 100){
+            return view('instructor.dashboard');
+            
+        } elseif ($role == 100) {
+            // Super Admin (level 100)
             return view('super_admin.dashboard');
+        } else {
 
-        } else{
+            // For other user roles (fallback)
             return view('adminlte::home');
-
         }
-        
     }
+    
     
     function search($search){
        $user = \App\User::where('username',$search)->first();

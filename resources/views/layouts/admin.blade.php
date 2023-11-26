@@ -6,7 +6,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 
     @section('htmlheader')
-        @include('adminlte::layouts.partials.htmlheader')
+        {{-- @include('adminlte::layouts.partials.htmlheader') --}}
+        @include('adminlte::super_layout.partials.htmlheader')
     @show
 
     <!--
@@ -30,58 +31,60 @@ scratch. This page gets rid of all links and provides the needed markup only.
     |---------------------------------------------------------|
     -->
     <body class="skin-black-light  sidebar-mini">
-    <div id="app">
-        <div class="wrapper">
+        <div id="app">
+            <div class="wrapper">
 
-        @include('adminlte::layouts.partials.mainheader')
+            {{-- @include('adminlte::layouts.partials.mainheader') --}}
+            @include('adminlte::super_layout.partials.mainheader')
 
-        @include('adminlte::layouts.partials.sidebar')
+            @include('adminlte::layouts.partials.sidebar')
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
 
 
-            @yield('header')
-            <!-- Main content -->
-            <section class="content">
-                <!-- Your Page Content Here -->
-                @yield('main-content')
-            </section><!-- /.content -->
-        </div><!-- /.content-wrapper -->
+                @yield('header')
+                <!-- Main content -->
+                <section class="content">
+                    <!-- Your Page Content Here -->
+                    @yield('main-content')
+                </section><!-- /.content -->
+            </div><!-- /.content-wrapper -->
 
-        @include('adminlte::layouts.partials.controlsidebar')
+            @include('adminlte::layouts.partials.controlsidebar')
 
-        @include('adminlte::layouts.partials.footer')
+            {{-- @include('adminlte::layouts.partials.footer') --}}
+            @include('adminlte::super_layout.partials.footer')
 
-    </div><!-- ./wrapper -->
-    </div>
-    @section('scripts')
-        @include('adminlte::layouts.partials.scripts')
-    @show
+        </div><!-- ./wrapper -->
+        </div>
+        @section('scripts')
+            @include('adminlte::layouts.partials.scripts')
+        @show
 
-    <script src="{{ asset('/plugins/select2/select2.js') }}" type="text/javascript"></script>
-    <script type="text/javascript" src="{{asset('/plugins/toastr/toastr.min.js')}}"></script>
-    @yield('footer-script')
-        <script>
+        <script src="{{ asset('/plugins/select2/select2.js') }}" type="text/javascript"></script>
+        <script type="text/javascript" src="{{asset('/plugins/toastr/toastr.min.js')}}"></script>
+        @yield('footer-script')
+            <script>
 
-        $('.select2').select2();
-        // Enable pusher logging - don't include this in production
-        //Pusher.logToConsole = true;
+            $('.select2').select2();
+            // Enable pusher logging - don't include this in production
+            //Pusher.logToConsole = true;
 
-        var pusher = new Pusher('a07b0f4928ae83a12227', {
-        cluster: 'ap1',
-        forceTLS: true
-        });
+            var pusher = new Pusher('a07b0f4928ae83a12227', {
+            cluster: 'ap1',
+            forceTLS: true
+            });
 
-        var channel = pusher.subscribe('loading-channel');
-        channel.bind('loading-notification', function(data) {
-        if(JSON.stringify(data.notification) != null){
-            alertmessage = data.notification;
-            alertmessage = alertmessage.replace(/"/g, "'");
-            toastr.warning(alertmessage,'Message!');
-        }
-        });
-    </script>
+            var channel = pusher.subscribe('loading-channel');
+            channel.bind('loading-notification', function(data) {
+            if(JSON.stringify(data.notification) != null){
+                alertmessage = data.notification;
+                alertmessage = alertmessage.replace(/"/g, "'");
+                toastr.warning(alertmessage,'Message!');
+            }
+            });
+        </script>
 
     </body>
 </html>
