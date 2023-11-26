@@ -37,10 +37,15 @@ if(Auth::user()->is_first_login == 1){
     <div class="row">
         <div class="col-sm-5">
             <div class="box box-solid box-default">
+
+                {{-- Course Name --}}
                 <div class="box-header bg-navy-active">
                     <h5 class="box-title">{{$program->program_name}}</h5>
                 </div>
+
+                {{-- Selections --}}
                 <div class="box-body">
+                    {{-- Select Level --}}
                     <div class="form-group">
                         <label>Level</label>
                         <select class="select2 form-control" onchange="getsections(this.value)">
@@ -49,12 +54,14 @@ if(Auth::user()->is_first_login == 1){
                             <option>2nd Year</option>
                             <option>3rd Year</option>
                             <option>4th Year</option>
-                            
                         </select>
                     </div>
+                    {{-- Selecte Sections --}}
                     <div class="form-group" id="displaysections">
                     </div>
                 </div>
+
+                
             </div>
         </div>
         <div class="col-sm-7">

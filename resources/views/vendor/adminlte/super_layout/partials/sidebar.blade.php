@@ -49,7 +49,7 @@
         <li>
             <a href="/admin/faculty_loading">
                 <i class='fa  fa-list'></i>
-                <span>Faculty Loading</span>
+                <span>Schedule Generation</span>
             </a>
         </li>
         
@@ -62,7 +62,75 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>
             </a>
+            
             <ul class="treeview-menu">
+                {{-- Section Maintenance --}}
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <span>Section Maintenance</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li>
+                            <a href="/admin/section_management">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <span>Section Management</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/curiculum_management/curriculum">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <span>Curriculum</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/course_offerings">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <span>Course Offering</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/course_scheduling">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <span>Course Scheduling</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                {{-- User Profile --}}
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span>User Profile</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="">
+                            <a href="{{ url('/superadmin/register_admin') }}">
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                <span>Register Administrator</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/instructor/add_instructor">
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                <span>Add User</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin/instructor/view_instructor_account">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span>View Users</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li>
                     <a href="/admin/room_management">
                         <i class='fa  fa-gear'></i>
@@ -72,74 +140,7 @@
                 
             </ul>
         </li>
-
-        {{-- Section Maintenance --}}
-        <li class="treeview">
-            <a href="#">
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                <span>Section Maintenance</span>
-                <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                </span>
-            </a>
-            <ul class="treeview-menu">
-                <li>
-                    <a href="/admin/section_management">
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                        <span>Section Management</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/curiculum_management/curriculum">
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                        <span>Curriculum</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/course_offerings">
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                        <span>Course Offering</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/course_scheduling">
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                        <span>Course Scheduling</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-        {{-- User Profile --}}
-        <li class="treeview">
-            <a href="#">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span>User Profile</span>
-                <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                </span>
-            </a>
-            <ul class="treeview-menu">
-                <li class="">
-                    <a href="{{ url('/superadmin/register_admin') }}">
-                        <i class="fa fa-user-plus" aria-hidden="true"></i>
-                        <span>Register Administrator</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/instructor/add_instructor">
-                        <i class="fa fa-user-plus" aria-hidden="true"></i>
-                        <span>Add User</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/instructor/view_instructor_account">
-                        <i class="fa fa-users" aria-hidden="true"></i>
-                        <span>View Users</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
+        {{-- Maintenance --}}
               
         {{-- Reports & Analytics --}}
         <li class="treeview">
