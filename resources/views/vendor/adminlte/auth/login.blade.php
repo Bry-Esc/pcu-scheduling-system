@@ -39,9 +39,10 @@
             }
             img {
                 display: block;
-                max-height:95px;
+                max-height: 85px;
                 width: auto;
                 height: auto;
+                padding-left: 8px;
             }
             .login-page {
                 background-image: url('{{ asset('img/IMM_bg.jpg') }}');
@@ -91,7 +92,7 @@
     <body class="login-page">
         <div class="container-fluid header">    
             <div class="col-md-1 pull-left">
-                <img class="logo" src="{{ asset('img/schd-logo.png') }}" alt="pcuLogo"/>
+                <img class="logo" src="{{ asset('img/schd-logo-white.png') }}" alt="pcuLogo"/>
             </div>
             <div class="col-md-8"><span class="schoolname">Philippine Christian University Dasma Campus </span>
                 <span class="address"><br>Sampaloc 1, City of Dasmariñas</span>
