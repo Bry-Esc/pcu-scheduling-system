@@ -18,7 +18,8 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-                <!-- Messages: style can be found in dropdown.less-->
+
+                <!-- Messages -->
                 <li class="">
                     <!-- Menu toggle button -->
                     <!-- Message icon -->
@@ -49,7 +50,8 @@
                         </li>
                         <li class="footer"><a href="#">c</a></li>
                     </ul>
-                </li><!-- /.messages-menu -->
+                </li>
+                <!-- Messages -->
 
                 <!-- Notifications Menu -->
                 <li class="">
@@ -77,6 +79,7 @@
                         </li>
                     </ul>
                 </li>
+                <!-- Notifications Menu -->
 
                 <!-- Tasks Menu -->
                 <li class="dropdown tasks-menu">
@@ -115,6 +118,8 @@
                         </li>
                     </ul>
                 </li>
+                <!-- Tasks Menu -->
+
                 @if (Auth::guest())
                     <!-- Guest Links -->
                     <li><a href="{{ url('/register') }}">{{ trans('adminlte_lang::message.register') }}</a></li>

@@ -23,7 +23,7 @@
                 <!-- Notifications Menu -->
                 <li class="dropdown notifications-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-bell-o"></i>
+                        <i class="fa fa-bell" aria-hidden="true"></i>
                         @if(count($notifications)>0)<span class="label label-warning">{{$notifications->count()}}</span>@endif
                     </a>
                     <ul class="dropdown-menu">
