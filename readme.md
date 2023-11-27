@@ -63,7 +63,7 @@ We will now setup the Database, go to:
 
     http://localhost/phpmyadmin/
 
-Then create a **hometead** database
+Then create a **homestead** database
 
 **Step 9**
 
