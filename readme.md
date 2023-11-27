@@ -86,7 +86,7 @@ Then type the following in order:
 
 If successful, the cmd will give the website link to open the website
 
-## Account
+# Account
 
 The Default user for admin is:
 
