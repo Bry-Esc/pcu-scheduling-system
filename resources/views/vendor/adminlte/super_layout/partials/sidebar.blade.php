@@ -4,6 +4,7 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
+    <!-- TEST -->
         <!-- Sidebar user panel (optional) -->
         @if (! Auth::guest())
             <div class="user-panel">
