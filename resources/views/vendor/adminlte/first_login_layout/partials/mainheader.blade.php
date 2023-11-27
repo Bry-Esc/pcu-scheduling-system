@@ -2,13 +2,11 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{ url('/home') }}" class="logo">
-        <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>JEFF</b></span>
-        <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b></b>NOTACTIVATED</span>
+    <a href="{{ url('/home') }}">
+        <!-- Logo for regular state and mobile devices -->
+        <img class="pcu-logo" src="{{ asset('img/schd-detailed-logo.png') }}" alt="pcu-logo" />
     </a>
-
+    
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
         <!-- Sidebar toggle button-->

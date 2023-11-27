@@ -61,6 +61,12 @@ class HomeController extends Controller {
             // For other user roles (fallback)
             return view('adminlte::home');
         }
+        // // Debug
+        // return view('admin.dashboard');
+        // return view('instructor.dashboard');
+        // return view('super_admin.dashboard');
+        // return view('instructor.first_login');
+        // return view('adminlte::home');
     }
     
     

@@ -6,7 +6,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 
     @section('htmlheader')
-        @include('adminlte::first_login_layout.partials.htmlheader')
+        {{-- @include('adminlte::first_login_layout.partials.htmlheader') --}}
+        @include('adminlte::super_layout.partials.htmlheader')
     @show
 
     <!--
