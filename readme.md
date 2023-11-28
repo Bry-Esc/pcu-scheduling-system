@@ -40,7 +40,7 @@ Run XAMPP control panel as administrator then
 
 Go to CMD then type the following:
 
-    cd C:\htdocs\SchedulingSystem-master
+    cd C:\htdocs\pcu-scheduling-system
     composer install
 
 Leave this CMD open, we will use again.
@@ -51,11 +51,11 @@ Leave this CMD open, we will use again.
 
 Replace the **PackageManifest.php** file from
 
-_SchedulingSystem-master\REPLACE FILE\PackageManifest.php_
+_pcu-scheduling-system\REPLACE FILE\PackageManifest.php_
 
 to
 
-_SchedulingSystem-master\vendor\laravel\framework\src\Illuminate\Foundation\PackageManifest.php_
+_pcu-scheduling-system\vendor\laravel\framework\src\Illuminate\Foundation\PackageManifest.php_
 
 **Step 8**
 
@@ -67,7 +67,7 @@ Then create a **homestead** database
 
 **Step 9**
 
-Find the ".env.example" file in "SchedulingSystem-master" folder then rename it to:
+Find the ".env.example" file in "pcu-scheduling-system" folder then rename it to:
 ".env"
 
 **Step 10**
