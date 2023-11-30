@@ -24,7 +24,7 @@
             width: auto;
             height: 50px;
             float: left;
-            margin-left: 85px;
+            margin-left: 60px;
         }
 
         /* Contains page content */

@@ -1,9 +1,23 @@
 <?php
-$tabular_schedules = \App\room_schedules::distinct()->
-                where('is_active', 1)->where('instructor', Auth::user()->id)->get(['offering_id', 'is_loaded']);
+    $tabular_schedules = \App\room_schedules::distinct()->
+        where('is_active', 1)->where('instructor', Auth::user()->id)->get(['offering_id', 'is_loaded']);
+    
+    $layout = "";
+
+    if(Auth::user()->is_first_login == 1){
+        $layout = 'layouts.first_login';
+    } else {
+        if(Auth::user()->accesslevel == 100){
+            $layout = 'layouts.superadmin';
+        }elseif(Auth::user()->accesslevel == 1){
+            $layout = 'layouts.instructor';
+        }elseif(Auth::user()->accesslevel == 0){
+            $layout = 'layouts.admin';
+        }
+    }
 ?>
 
-@extends('layouts.instructor')
+@extends($layout)
 
 @section('main-content')
 <link rel="stylesheet" href="{{ asset ('plugins/toastr/toastr.css')}}">

@@ -46,13 +46,14 @@ $programs = \App\academic_programs::distinct()->orderBy('program_code')->get(arr
 @section('header')
 <section class="content-header">
     <h1><i class="fa   fa-folder"></i>  
-        View Curriculum
+        Curriculum Maintenance
         <small></small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="#"> Curriculum Management</a></li>
-        <li class="active"><a>Add Curriculum</a></li>
+        {{-- <li><a href="#"> Curriculum Maintenance</a></li> --}}
+        <li class="active"><a href="#"> Curriculum Maintenance</a></li>
+        {{-- <li class="active"><a>Add Curriculum</a></li> --}}
     </ol>
 </section>
 @endsection

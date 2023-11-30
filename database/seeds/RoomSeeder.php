@@ -12,13 +12,15 @@ class RoomSeeder extends Seeder
     public function run()
     {
         \App\CtrRoom::create([
-            'room' => '302',
-            'building' => 'IT Building'
+            'room' => 'CL9',
+            'building' => '3rd Floor',
+            'description' => 'New Acad. Building'
         ]);
         
         \App\CtrRoom::create([
-            'room' => '301',
-            'building' => 'IT Building'
+            'room' => 'CL10',
+            'building' => '3rd Floor',
+            'description' => 'New Acad. Building'
         ]);
     }
 }

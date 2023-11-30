@@ -45,12 +45,25 @@
                 <span>Home</span>
             </a>
         </li>
+
+        {{-- View Schedule --}}
+        <li class="">
+            <a href="{{ url('/instructor/faculty_loading') }}">
+                <i class='fa fa-calendar-check-o '></i><span>View Schedule</span>
+            </a>
+        </li>
+
+        {{-- Generate Schedule --}}
+        <li>
+            <a href="/admin/faculty_loading">
+                <i class='fa  fa-list'></i><span>Generate Schedule</span>
+            </a>
+        </li>
         
         {{-- Maintenance --}}
         <li class="treeview">
             <a href="#">
-                <i class="fa fa-gears"></i>
-                <span>Maintenance</span>
+                <i class="fa fa-gears"></i><span>Maintenance</span>
                 <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -127,8 +140,7 @@
         {{-- Section Maintenance --}}
         <li class="treeview">
             <a href="#">
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                <span>Section Maintenance</span>
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Section Maintenance</span>
                 <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -147,8 +159,7 @@
         {{-- Section Maintenance --}}
         <li class="treeview">
             <a href="#">
-                <i class="fa fa-book" aria-hidden="true"></i>
-                <span>Curriculum</span>
+                <i class="fa fa-book" aria-hidden="true"></i><span>Curriculum</span>
                 <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -179,24 +190,15 @@
         {{-- Reports & Analytics --}}
         <li class="treeview">
             <a href="#">
-                <i class="fa fa-pencil"></i>
-                <span>Reports & Analytics</span>
+                <i class="fa fa-pencil"></i><span>Reports & Analytics</span>
                 <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>
             </a>
             <ul class="treeview-menu">
-                <li><a href="{{ url('/admin/instructor/instructor_reports') }}"><i class="fa fa-circle-o"></i> <span>Instructor Reports</span></a></li>
+                {{-- <li><a href="{{ url('/admin/instructor/instructor_reports') }}"><i class="fa fa-circle-o"></i> <span>Instructor Reports</span></a></li> --}}
                 <li><a href="{{url('/admin/reports/rooms_occupied') }}"><i class="fa fa-circle-o"></i> <span>Rooms Occupied</span></a></li>
             </ul>
-        </li>
-
-        {{-- Faculty Loading --}}
-        <li>
-            <a href="/admin/faculty_loading">
-                <i class='fa  fa-list'></i>
-                <span>Schedule Generation</span>
-            </a>
         </li>
                              
         <?php $notifications = \App\LoadNotification::where('is_trash',0)->get();?>

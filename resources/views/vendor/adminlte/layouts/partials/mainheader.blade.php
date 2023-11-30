@@ -5,7 +5,7 @@
     <div class="pcu-logo-container">
         <a href="{{ url('/home') }}">
             <!-- Logo for regular state and mobile devices -->
-            <img class="pcu-logo" src="{{ asset('img/schd-detailed-logo.png') }}" alt="pcu-logo" />
+            <img class="pcu-logo" src="{{ asset('img/techSCHD.png') }}" alt="pcu-logo" />
         </a>
     </div>
 

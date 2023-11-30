@@ -73,7 +73,7 @@
                 bottom:0;
                 width:100%;
                 height:30px;
-                background:#fff;
+                background:#002E97;
                 padding-top: 5px;
                 z-index: 9999;
             }    

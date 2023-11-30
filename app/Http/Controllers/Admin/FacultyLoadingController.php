@@ -9,16 +9,19 @@ use Auth;
 class FacultyLoadingController extends Controller
 {
     public function __construct() {
+        // Ensure authentication is required for accessing any method in this controller
         $this->middleware('auth');
+
+        // Check if the user is activated before allowing access to methods in this controller
         $this->middleware('checkIfActivated');
-        $this->middleware('admin');
+
+        // Ensure that only users with admin privileges can access methods in this controller
+        // $this->middleware('admin');
     }
     
     function faculty_loading(){
-       
-           $instructors = \App\User::where('accesslevel',1)->get();
-           return view('admin.faculty_loading.faculty_loading',compact('instructors'));
-       
+        $instructors = \App\User::where('accesslevel',1)->get();
+        return view('admin.faculty_loading.faculty_loading',compact('instructors'));
     }
     
     function generate_schedule($instructor){

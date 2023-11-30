@@ -5,7 +5,7 @@
     <div class="pcu-logo-container">
         <a href="{{ url('/home') }}">
             <!-- Logo for regular state and mobile devices -->
-            <img class="pcu-logo" src="{{ asset('img/schd-detailed-logo.png') }}" alt="pcu-logo" />
+            <img class="pcu-logo" src="{{ asset('img/techSCHD.png') }}" alt="pcu-logo" />
         </a>
     </div>
 
@@ -22,7 +22,7 @@
                 <li class="">
                     <!-- Menu toggle button -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class=""></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
                         <span class="label label-success"></span>
                     </a>
                     <ul class="dropdown-menu">
@@ -52,10 +52,10 @@
                 </li><!-- /.messages-menu -->
 
                 <!-- Notifications Menu -->
-                <li class="">
+                {{-- <li class="">
                     <!-- Menu toggle button -->
-                    <a href="#" class="" data-toggle="">
-                        <i class=""></i>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
                         <span class=""></span>
                     </a>
                     <ul class="dropdown-menu">
@@ -72,9 +72,10 @@
                         </li>   
                         <li class="footer"><a href="#">{{ trans('adminlte_lang::message.viewall') }}</a></li>
                     </ul>
-                </li>
+                </li> --}}
+
                 <!-- Tasks Menu -->
-                <li class="dropdown tasks-menu">
+                {{-- <li class="dropdown tasks-menu">
                     <!-- Menu Toggle Button -->
                     <a href="#" class="" data-toggle="dropdown">
                         <i class=""></i>
@@ -107,7 +108,7 @@
                             <a href="#">{{ trans('adminlte_lang::message.alltasks') }}</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 @if (Auth::guest())
                     <li><a href="{{ url('/register') }}">{{ trans('adminlte_lang::message.register') }}</a></li>
                     <li><a href="{{ url('/login') }}">{{ trans('adminlte_lang::message.login') }}</a></li>
@@ -117,21 +118,22 @@
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src="{{ Gravatar::get($user->email) }}" class="user-image" alt="User Image"/>
+                            <img src="{{ asset('img/avatar2.png') }}" class="user-image" alt="User Image"/>
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class="hidden-xs">{{ Auth::user()->name }}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src="http://scheduling.local/images/avatar5.png" class="img-circle" alt="User Image" />
+                                {{-- <img src="http://scheduling.local/images/avatar5.png" class="img-circle" alt="User Image" /> --}}
+                                <img src="{{ asset('img/avatar2.png') }}" class="img-circle" alt="User Image"/>
                                 <p>
                                     {{ Auth::user()->name }}
                                     <small>{{ trans('adminlte_lang::message.login') }} </small>
                                 </p>
                             </li>
                             <!-- Menu Body -->
- <!--                           <li class="user-body">
+                            <li class="user-body">
                                 <div class="col-xs-4 text-center">
                                     <a href="#">{{ trans('adminlte_lang::message.followers') }}</a>
                                 </div>
@@ -142,10 +144,11 @@
                                     <a href="#">{{ trans('adminlte_lang::message.friends') }}</a>
                                 </div>
                             </li>
-                            <!-- Menu Footer-->
+                            <!-- Menu Footer -->
                             <li class="user-footer">
                                 <div class="pull-left">
-<!--                                    <a href="{{ url('/settings') }}" class="btn btn-default btn-flat">{{ trans('adminlte_lang::message.profile') }}</a>-->
+                                    {{-- <a href="{{ url('/settings') }}" class="btn btn-default btn-flat">{{ trans('adminlte_lang::message.profile') }}</a> --}}
+                                    <a href="{{ url('/account/change_password') }}" class="btn btn-default btn-flat">{{ trans('adminlte_lang::message.profile') }}</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"

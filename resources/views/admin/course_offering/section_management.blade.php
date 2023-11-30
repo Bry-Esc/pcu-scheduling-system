@@ -18,12 +18,12 @@ $layout = "";
 <link rel='stylesheet' href='{{asset('plugins/select2/select2.css')}}'>
 <section class="content-header">
     <h1><i class="fa  fa-cubes"></i>
-        Section
+        Section Maintenance
         <small></small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{url('/')}}"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Section</li>
+        <li class="active">Section Maintenance</li>
     </ol>
 </section>
 

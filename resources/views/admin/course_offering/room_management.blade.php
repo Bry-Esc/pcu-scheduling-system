@@ -65,7 +65,7 @@ if(Auth::user()->is_first_login == 1){
                         <input type='text' required class='form-control' name='building'>
                     </div>
                     <div class='form-group'>
-                        <label>Description</label>
+                        <label>Building</label>
                         <input type='text'  class='form-control' name='description'>
                     </div>
                     <div class='form-group'>
@@ -90,7 +90,7 @@ if(Auth::user()->is_first_login == 1){
                                 <tr>
                                     <th width='20%'>Room</th>
                                     <th width='20%'>Floor</th>
-                                    <th width='20%'>Description</th>
+                                    <th width='20%'>Building</th>
                                     <th width='20%'>Status</th>
                                     <th width='20%'>Action</th>
                                 </tr>

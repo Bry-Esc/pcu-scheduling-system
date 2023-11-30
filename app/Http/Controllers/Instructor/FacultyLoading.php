@@ -14,7 +14,7 @@ class FacultyLoading extends Controller
     }
     
     function faculty_loading(){
-        if(Auth::user()->accesslevel == 1){
+        if(Auth::user()->accesslevel == 1 || Auth::user()->accesslevel == 100){
             return view('instructor.faculty_loading.faculty_loading');
         }
     }

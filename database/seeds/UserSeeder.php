@@ -43,11 +43,11 @@ class UserSeeder extends Seeder
         
         // DEPARTMENT HEAD
         \App\User::create([
-            'username' => 'dep-head@gmail.com',
+            'username' => 'dep-head@pcu.edu.ph',
             'name' => 'Department Head',
             'middlename' => ' ',
             'lastname' => 'Head',
-            'accesslevel' => 1,
+            'accesslevel' => 0,
             'email' => 'dep-head@gmail.com',
             'password' => bcrypt('password1234'),
             'is_first_login' => 0
@@ -55,19 +55,19 @@ class UserSeeder extends Seeder
 
         // DEAN OF COLLEGES
         \App\User::create([
-            'username' => 'dean@gmail.com',
-            'name' => 'Dean of Colleges',
+            'username' => 'dean@pcu.edu.ph',
+            'name' => 'Dean of College',
             'middlename' => ' ',
             'lastname' => 'Dean',
-            'accesslevel' => 0,
+            'accesslevel' => 1,
             'email' => 'dean@gmail.com',
             'password' => bcrypt('password1234'),
             'is_first_login' => 0
         ]);
 
-        // DEAN OF COLLEGES
+        // STUDENT !!NOT WORKING!!
         \App\User::create([
-            'username' => 'student@gmail.com',
+            'username' => 'student@pcu.edu.ph',
             'name' => 'Student',
             'middlename' => ' ',
             'lastname' => 'Student',

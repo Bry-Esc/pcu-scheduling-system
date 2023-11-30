@@ -20,14 +20,14 @@
         @endif
 
         {{-- Search Form (Optional) --}}
-        <form action="#" method="get" class="sidebar-form">
+        {{-- <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
                 <input type="text" name="q" class="form-control" placeholder="{{ trans('adminlte_lang::message.search') }}..."/>
               <span class="input-group-btn">
                 <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
               </span>
             </div>
-        </form>
+        </form> --}}
 
         <!-- Sidebar Menu -->
        <!-- <ul class="sidebar-menu">
@@ -38,12 +38,12 @@
             <li class="header">MENU</li>
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-home '></i> <span>Home</span></a></li>
                 
-            <li>
+            {{-- <li>
                 <a href="/admin/faculty_loading">
                     <i class='fa  fa-list'></i>
                     <span>Schedule Generation</span>
                 </a>
-            </li>
+            </li> --}}
             
             {{-- Maintenance --}}
             <li class="treeview">
@@ -63,9 +63,40 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/admin/section_management">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            <span>Section</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="/admin/curiculum_management/curriculum">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             <span>Curriculum</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            {{-- User Profile --}}
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span>Instuctor</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li>
+                        <a href="/admin/instructor/add_instructor">
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                            <span>Add Instructor</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/instructor/view_instructor_account">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <span>View Instructors</span>
                         </a>
                     </li>
                 </ul>
@@ -81,11 +112,13 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('/admin/instructor/instructor_reports') }}"><i class="fa fa-circle-o"></i> <span>Instructor Reports</span></a></li>
-                    <li><a href="{{url('/admin/reports/rooms_occupied') }}"><i class="fa fa-circle-o"></i> <span>Rooms Occupied</span></a></li>
+                    <li>
+                        <a href="{{url('/admin/reports/rooms_occupied') }}">
+                            <i class="fa fa-circle-o"></i> <span>Rooms Occupied</span>
+                        </a>
+                    </li>
                 </ul>
-            </li>
-                            
+            </li>            
                     
             <?php $notifications = \App\LoadNotification::where('is_trash',0)->get();?>
 

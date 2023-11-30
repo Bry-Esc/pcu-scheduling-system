@@ -24,7 +24,7 @@ class InstructorReportsController extends Controller
     }
 
     function view_add() {
-        if (Auth::user()->accesslevel == 0 || Auth::user()->accesslevel == 100) {
+        if (Auth::user()->accesslevel == 0 || Auth::user()->accesslevel == 100 || Auth::user()->accesslevel == 1) {
             $instructors = \App\User::where('accesslevel',1)->get();
             return view('/admin/instructor/instructor_reports',compact('instructors'));
         }else{

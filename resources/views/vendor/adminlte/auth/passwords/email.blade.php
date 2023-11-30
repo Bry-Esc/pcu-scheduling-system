@@ -12,7 +12,7 @@
         <div class="login-box">
         <div class="login-logo">
             <a href="{{ url('/home') }}">
-                <b>PCUSCHD</b>
+                <b>TCHSCHD</b>
             </a>
         </div><!-- /.login-logo -->
 
