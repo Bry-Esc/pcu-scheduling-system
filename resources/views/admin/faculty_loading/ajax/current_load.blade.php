@@ -51,7 +51,8 @@ if(!$schedules->isEmpty()){
         <ul class="nav nav-tabs pull-right">
           <li class="active"><a href="#tab_1-1" data-toggle="tab">Calendar View</a></li>
           <li><a href="#tab_2-2" data-toggle="tab">Tabular View</a></li>
-          <li class="pull-left header"><i class="fa fa-calendar "></i> Faculty Loading  <b><span>({{$employee_type->employee_type}})</b> <br><small>Total No. of Units Loaded: {{$loads->sum('units')}}</small></li>
+          {{-- <li class="pull-left header"><i class="fa fa-calendar "></i> Faculty Loading  <b><span>({{$employee_type->employee_type}})</b> <br><small>Total No. of Units Loaded: {{$loads->sum('units')}}</small></li> --}}
+          <li class="pull-left header"><i class="fa fa-calendar "></i> Schedule  <b><span>({{$employee_type->employee_type}})</b> <br><small>Total No. of Units Loaded: {{$loads->sum('units')}}</small></li>
         </ul>
         <div class="tab-content">
           <div class="tab-pane active" id="tab_1-1">

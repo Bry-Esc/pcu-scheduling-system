@@ -19,8 +19,9 @@ if(Auth::user()->is_first_login == 1){
 
 @section('main-content')
 <section class="content-header">
-      <h1><i class="fa  fa-spinner"></i>  
-        Course Scheduling
+      <h1><i class="fa fa-book" aria-hidden="true"></i>  
+        {{-- Course Scheduling --}}
+        Schedule Course
         <small></small>
       </h1>
       <ol class="breadcrumb">

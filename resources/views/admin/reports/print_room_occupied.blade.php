@@ -19,7 +19,7 @@
     </head>
     <body>
         <div class="a">
-            <b>Sample School</b>
+            <b>Philippine Christian University Dasma Campus</b>
              </div>
         <div class="b">
         
@@ -36,7 +36,7 @@
                     <th>Day</th>
                     <th>Schedule</th>
                     <th>Room</th>
-                    <th>Building</th>
+                    <th>Floor</th>
                 </tr>
             </thead>
             <tbody>

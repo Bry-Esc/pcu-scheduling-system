@@ -41,19 +41,32 @@
                 </a>
             </li>
 
-            {{-- View Schedule --}}
-            <li class="">
-                <a href="{{ url('/instructor/faculty_loading') }}">
-                    <i class='fa fa-calendar-check-o '></i><span>View Schedule</span>
+            {{-- Generate Course --}}
+            <li>
+                <a href="/admin/course_scheduling">
+                    <i class="fa fa-book" aria-hidden="true"></i><span>Schedule Course</span>
                 </a>
-            </li>   
-
+            </li>
+            
             {{-- Schedule Generation --}}
             <li>
                 <a href="/admin/faculty_loading">
                     <i class="fa fa-calendar" aria-hidden="true"></i><span>Generate Schedule</span>
                 </a>
             </li>
+
+            {{-- View Schedule --}}
+            <li class="">
+                <a href="{{ url('/admin/instructor/instructor_reports') }}">
+                    <i class='fa fa-calendar-check-o '></i><span>View Schedule</span>
+                </a>
+            </li>   
+
+            {{-- <li>
+                <a href="{{ url('/admin/instructor/instructor_reports') }}">
+                    <i class="fa fa-circle-o"></i> <span>Instructor Reports</span>
+                </a>
+            </li> --}}
 
             {{-- Reports & Analytics --}}
             <li class="treeview">

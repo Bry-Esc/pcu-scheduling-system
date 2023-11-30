@@ -21,7 +21,7 @@
                 <!-- Messages: style can be found in dropdown.less-->
                 <li class="">
                     <!-- Menu toggle button -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    {{-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                         <span class="label label-success"></span>
                     </a>
@@ -48,7 +48,34 @@
                             </ul><!-- /.menu -->
                         </li>
                         <li class="footer"><a href="#">c</a></li>
-                    </ul>
+                    </ul> --}}
+
+                    <?php $notifications = \App\LoadNotification::where('is_trash',0)->get();?>
+                    <!-- Notifications Menu -->
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                            @if(count($notifications)>0)<span class="label label-warning">{{$notifications->count()}}</span>@endif
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">@if(count($notifications)>0) You have {{$notifications->count()}} notifications @endif</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    @if(count($notifications)>0)
+                                        @foreach($notifications as $notif)
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-list text-aqua"></i> {{$notif->content}}
+                                            </a>
+                                        </li>
+                                        @endforeach
+                                    @endif
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="{{url('/admin/notification')}}">View all</a></li>
+                        </ul>
+                    </li>
                 </li><!-- /.messages-menu -->
 
                 <!-- Notifications Menu -->

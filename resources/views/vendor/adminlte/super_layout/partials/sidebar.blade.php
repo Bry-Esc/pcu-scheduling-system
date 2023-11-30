@@ -41,22 +41,7 @@
         {{-- Home --}}
         <li class="active">
             <a href="{{ url('home') }}">
-                <i class='fa fa-home'></i>
-                <span>Home</span>
-            </a>
-        </li>
-
-        {{-- View Schedule --}}
-        <li class="">
-            <a href="{{ url('/instructor/faculty_loading') }}">
-                <i class='fa fa-calendar-check-o '></i><span>View Schedule</span>
-            </a>
-        </li>
-
-        {{-- Generate Schedule --}}
-        <li>
-            <a href="/admin/faculty_loading">
-                <i class='fa  fa-list'></i><span>Generate Schedule</span>
+                <i class='fa fa-home'></i><span>Home</span>
             </a>
         </li>
         
@@ -94,38 +79,6 @@
                 </li> --}}
                 {{-- DEBUG --}}
 
-                
-
-                {{-- User Profile --}}
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                        <span>User Profile</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class="">
-                            <a href="{{ url('/superadmin/register_admin') }}">
-                                <i class="fa fa-user-plus" aria-hidden="true"></i>
-                                <span>Register Administrator</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/admin/instructor/add_instructor">
-                                <i class="fa fa-user-plus" aria-hidden="true"></i>
-                                <span>Add User</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/admin/instructor/view_instructor_account">
-                                <i class="fa fa-users" aria-hidden="true"></i>
-                                <span>View Users</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
                 <li>
                     <a href="/admin/room_management">
                         <i class='fa  fa-gear'></i>
@@ -186,6 +139,36 @@
             </ul>
         </li>
         {{-- Section Maintenance --}}
+
+        {{-- User Profile --}}
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-user" aria-hidden="true"></i><span>User Profile</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+                {{-- <li class="">
+                    <a href="{{ url('/superadmin/register_admin') }}">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <span>Register Administrator</span>
+                    </a>
+                </li> --}}
+                <li>
+                    <a href="/admin/instructor/add_instructor">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <span>Add Instructor</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/instructor/view_instructor_account">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span>List Instructors</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
               
         {{-- Reports & Analytics --}}
         <li class="treeview">
@@ -196,9 +179,23 @@
                 </span>
             </a>
             <ul class="treeview-menu">
-                {{-- <li><a href="{{ url('/admin/instructor/instructor_reports') }}"><i class="fa fa-circle-o"></i> <span>Instructor Reports</span></a></li> --}}
+                <li><a href="{{ url('/admin/instructor/instructor_reports') }}"><i class="fa fa-circle-o"></i> <span>Instructor Reports</span></a></li>
                 <li><a href="{{url('/admin/reports/rooms_occupied') }}"><i class="fa fa-circle-o"></i> <span>Rooms Occupied</span></a></li>
             </ul>
+        </li>
+
+        {{-- View Schedule --}}
+        <li class="">
+            <a href="{{ url('/instructor/faculty_loading') }}">
+                <i class='fa fa-calendar-check-o '></i><span>View Schedule</span>
+            </a>
+        </li>
+
+        {{-- Generate Schedule --}}
+        <li>
+            <a href="/admin/faculty_loading">
+                <i class="fa fa-calendar" aria-hidden="true"></i><span>Generate Schedule</span>
+            </a>
         </li>
                              
         <?php $notifications = \App\LoadNotification::where('is_trash',0)->get();?>

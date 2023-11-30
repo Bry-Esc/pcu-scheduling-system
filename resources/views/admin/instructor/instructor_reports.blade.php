@@ -43,13 +43,14 @@ if(Auth::user()->is_first_login == 1){
 @endsection
 @section('header')
 <section class="content-header">
-      <h1><i class="fa fa-chain"></i>  
-        Instructor Reports
+      <h1><i class='fa fa-calendar-check-o '></i>  
+        {{-- Instructor Reports --}}
+        View Schedule
         <small></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{url('/')}}"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Instructor Reports</li>
+        <li class="active">View Schedule</li>
       </ol>
 </section>
 @endsection
@@ -59,7 +60,7 @@ if(Auth::user()->is_first_login == 1){
 <section class="content">
     <div class="container-fluid">
         <div class="box box-default">
-            <div class="box-header"><h5 class="box-title">List of Instructors</h5></div>
+            <div class="box-header"><h5 class="box-title">List of Schedules</h5></div>
                 <div class="box-body">
                     <div class="table-responsive">
                         <table class="table table-bordered">
@@ -70,7 +71,8 @@ if(Auth::user()->is_first_login == 1){
                   <th>ID Number</th>
                   <th>Name</th>
                   <th width="40%">College</th>
-                  <th width="5%">Faculty Loading</th>
+                  {{-- <th width="5%">Faculty Loading</th> --}}
+                  <th width="5%">View Schedule</th>
                 </tr>
                 </thead>
                             </thead>

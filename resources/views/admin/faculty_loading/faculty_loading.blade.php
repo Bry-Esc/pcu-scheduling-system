@@ -163,15 +163,15 @@
 
     function init_events(ele) {
         ele.each(function () {
-        var eventObject = {
-            title: $(this).attr("data-object")
-        }
-        $(this).data('eventObject', eventObject);
-        $(this).draggable({
-            zIndex        : 1070,
-            revert        : true,
-            revertDuration: 0 
-        })
+            var eventObject = {
+                title: $(this).attr("data-object")
+            }
+            $(this).data('eventObject', eventObject);
+            $(this).draggable({
+                zIndex        : 1070,
+                revert        : true,
+                revertDuration: 0 
+            })
         })
     }
     </script>
