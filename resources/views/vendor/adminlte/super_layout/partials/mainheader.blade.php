@@ -82,7 +82,7 @@
                 <!-- Notifications Menu -->
 
                 <!-- Tasks Menu -->
-                <li class="dropdown tasks-menu">
+                {{-- <li class="dropdown tasks-menu">
                     <!-- Menu Toggle Button -->
                     <!-- Task icon -->
                     <a href="#" class="" data-toggle="dropdown">
@@ -117,7 +117,7 @@
                             <a href="#">{{ trans('adminlte_lang::message.alltasks') }}</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <!-- Tasks Menu -->
 
                 @if (Auth::guest())

@@ -1,19 +1,16 @@
 <?php 
 $layout = "";
-
-if(Auth::user()->is_first_login == 1){
-    $layout = 'layouts.first_login';
-}else{
-    if(Auth::user()->accesslevel == 100){
-        $layout = 'layouts.superadmin';
-    }elseif(Auth::user()->accesslevel == 1){
-        $layout = 'layouts.instructor';
-    }elseif(Auth::user()->accesslevel == 0){
-        $layout = 'layouts.admin';
+    if(Auth::user()->is_first_login == 1){
+        $layout = 'layouts.first_login';
+    }else{
+        if(Auth::user()->accesslevel == 100){
+            $layout = 'layouts.superadmin';
+        }elseif(Auth::user()->accesslevel == 1){
+            $layout = 'layouts.instructor';
+        }elseif(Auth::user()->accesslevel == 0){
+            $layout = 'layouts.admin';
+        }
     }
-}
-
-
 ?>
 @extends($layout)
 
@@ -21,13 +18,13 @@ if(Auth::user()->is_first_login == 1){
 <link rel='stylesheet' href='{{asset('plugins/select2/select2.css')}}'>
 <section class="content-header">
     <h1><i class="fa  fa-cubes"></i>
-        Section Management
+        Section
         <small></small>
-      </h1>
-      <ol class="breadcrumb">
+    </h1>
+    <ol class="breadcrumb">
         <li><a href="{{url('/')}}"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Section Management</li>
-      </ol>
+        <li class="active">Section</li>
+    </ol>
 </section>
 
 

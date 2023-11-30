@@ -12,12 +12,14 @@ $tabular_schedules = \App\room_schedules::distinct()->
 <link rel="stylesheet" href="{{ asset ('plugins/datatables/jquery.dataTables.css')}}">
 <section class="content-header">
     <h1><i class="fa fa-bullhorn"></i>
-        Faculty Loading Assignment
+        {{-- Faculty Loading Assignment --}}
+        Schedule
         <small></small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{url('/')}}"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Faculty Loading Assignment</li>
+        {{-- <li class="active">Faculty Loading Assignment</li> --}}
+        <li class="active">Schedule</li>
     </ol>
 </section>
 

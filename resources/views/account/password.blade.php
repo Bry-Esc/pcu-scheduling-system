@@ -1,13 +1,13 @@
 <?php 
-$layout = "";
-if(Auth::user()->accesslevel == 100){
-    $layout = 'layouts.superadmin';
-}elseif(Auth::user()->accesslevel == 1){
-    $layout = 'layouts.first_login';
-}elseif(Auth::user()->accesslevel == 0){
-    $layout = 'layouts.admin';
-}
-
+    $layout = "";
+    if(Auth::user()->accesslevel == 100){
+        $layout = 'layouts.superadmin';
+    }elseif(Auth::user()->accesslevel == 1){
+        // $layout = 'layouts.first_login';
+        $layout = 'layouts.instructor';
+    }elseif(Auth::user()->accesslevel == 0){
+        $layout = 'layouts.admin';
+    }
 ?>
 @extends($layout)
 

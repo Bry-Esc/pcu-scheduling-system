@@ -45,14 +45,6 @@
                 <span>Home</span>
             </a>
         </li>
-
-        {{-- Faculty Loading --}}
-        <li>
-            <a href="/admin/faculty_loading">
-                <i class='fa  fa-list'></i>
-                <span>Schedule Generation</span>
-            </a>
-        </li>
         
         {{-- Maintenance --}}
         <li class="treeview">
@@ -64,43 +56,32 @@
                 </span>
             </a>
             
+            
             <ul class="treeview-menu">
                 {{-- Section Maintenance --}}
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                        <span>Section Maintenance</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
+
+                {{-- DEBUG --}}
+                {{-- <li>
+                    <a href="/admin/curiculum_management/curriculum">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Curriculum</span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li>
-                            <a href="/admin/section_management">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                <span>Section Management</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/admin/curiculum_management/curriculum">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                <span>Curriculum</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/admin/course_offerings">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                <span>Course Offering</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/admin/course_scheduling">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                <span>Course Scheduling</span>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
+                <li>
+                    <a href="/admin/instructor/add_instructor">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Instructors</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/section_management">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Section</span>
+                    </a>
+                </li> --}}
+                {{-- DEBUG --}}
+
+                
 
                 {{-- User Profile --}}
                 <li class="treeview">
@@ -142,6 +123,58 @@
             </ul>
         </li>
         {{-- Maintenance --}}
+
+        {{-- Section Maintenance --}}
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <span>Section Maintenance</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+                <li>
+                    <a href="/admin/section_management">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Section Management</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        {{-- Section Maintenance --}}
+        
+        {{-- Section Maintenance --}}
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <span>Curriculum</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+                <li>
+                    <a href="/admin/curiculum_management/curriculum">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Curriculum</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/course_offerings">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Course Offering</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/course_scheduling">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Course Scheduling</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        {{-- Section Maintenance --}}
               
         {{-- Reports & Analytics --}}
         <li class="treeview">
@@ -157,8 +190,15 @@
                 <li><a href="{{url('/admin/reports/rooms_occupied') }}"><i class="fa fa-circle-o"></i> <span>Rooms Occupied</span></a></li>
             </ul>
         </li>
-                         
-                
+
+        {{-- Faculty Loading --}}
+        <li>
+            <a href="/admin/faculty_loading">
+                <i class='fa  fa-list'></i>
+                <span>Schedule Generation</span>
+            </a>
+        </li>
+                             
         <?php $notifications = \App\LoadNotification::where('is_trash',0)->get();?>
             {{-- <li class=""><a href="{{ url('/admin/notification') }}"><i class='fa fa-bell-o '></i> <span>Notifications</span> @if(count($notifications)>0)<label class="label label-warning text-warning"><i class="">{{$notifications->count()}}</i></label> @endif </a></li> --}}
             {{-- <li class=""><a href="{{ url('/account/change_password') }}"><i class='fa fa-lock '></i> <span>Change Password</span></a></li> --}}

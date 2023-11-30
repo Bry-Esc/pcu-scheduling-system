@@ -35,6 +35,6 @@ class CreateOfferingsInfosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('offerings_infos_tables');
+        Schema::dropIfExists('offerings_infos');
     }
 }

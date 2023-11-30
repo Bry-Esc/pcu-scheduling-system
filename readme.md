@@ -97,3 +97,7 @@ User
 Password
 
     password1234
+
+# Note
+
+This system is currently using **Laravel v5.6**

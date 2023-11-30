@@ -2,12 +2,12 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{ url('/home') }}" class="logo">
-        <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>JEFF</b></span>
-        <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>JEFF</b></span>
-    </a>
+    <div class="pcu-logo-container">
+        <a href="{{ url('/home') }}">
+            <!-- Logo for regular state and mobile devices -->
+            <img class="pcu-logo" src="{{ asset('img/schd-detailed-logo.png') }}" alt="pcu-logo" />
+        </a>
+    </div>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
@@ -117,7 +117,7 @@
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src="http://scheduling.local/images/avatar5.png" class="user-image" alt="User Image"/>
+                            <img src="{{ Gravatar::get($user->email) }}" class="user-image" alt="User Image"/>
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class="hidden-xs">{{ Auth::user()->name }}</span>
                         </a>
