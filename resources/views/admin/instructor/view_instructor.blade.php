@@ -43,7 +43,7 @@ if(Auth::user()->is_first_login == 1){
 @endsection
 @section('header')
 <section class="content-header">
-      <h1><i class="fa fa-chain"></i>  
+      <h1><i class="fa fa-users" aria-hidden="true"></i>  
         List of Instructors
         <small></small>
       </h1>
