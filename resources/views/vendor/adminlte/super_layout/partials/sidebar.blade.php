@@ -85,13 +85,19 @@
                         <span>Room Maintenance</span>
                     </a>
                 </li>
+                <li>
+                    <a href="/admin/section_management">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <span>Section Management</span>
+                    </a>
+                </li>
                 
             </ul>
         </li>
         {{-- Maintenance --}}
 
         {{-- Section Maintenance --}}
-        <li class="treeview">
+        {{-- <li class="treeview">
             <a href="#">
                 <i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Section Maintenance</span>
                 <span class="pull-right-container">
@@ -106,10 +112,9 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> --}}
         {{-- Section Maintenance --}}
         
-        {{-- Section Maintenance --}}
         <li class="treeview">
             <a href="#">
                 <i class="fa fa-book" aria-hidden="true"></i><span>Curriculum</span>
@@ -138,7 +143,6 @@
                 </li>
             </ul>
         </li>
-        {{-- Section Maintenance --}}
 
         {{-- User Profile --}}
         <li class="treeview">
